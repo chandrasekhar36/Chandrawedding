@@ -488,6 +488,15 @@ section{
   margin-top:14px;margin-bottom:4px;
 }
 .event-detail strong::before{content:'✦';font-size:8px}
+.venue-link{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--gold2);text-decoration:none;font-style:normal;
+  border-bottom:1px dashed rgba(201,168,76,0.4);
+  padding-bottom:2px;
+  transition:color 0.25s,border-color 0.25s,text-shadow 0.25s;
+}
+.venue-link:hover{color:var(--pale);border-bottom-color:var(--gold);text-shadow:0 0 16px rgba(201,168,76,0.5);}
+.venue-link .map-icon{font-size:15px;}
 
 /* ── FAMILIES ── */
 .families-bg{
@@ -794,7 +803,7 @@ footer{
         <strong>📅 Date &amp; Time</strong>
         Saturday, 25th April 2026<br/>6:00 PM – 9:00 PM
         <strong>📍 Venue</strong>
-        <a href='https://maps.app.goo.gl/nieaBeFS2DXiLAkaA'>Naidu Kalyanamandapam</a><br/>Nellore, Andhra Pradesh
+        <a href="https://maps.app.goo.gl/nieaBeFS2DXiLAkaA" target="_blank" class="venue-link"><span class="map-icon">🗺️</span>Naidu Kalyanamandapam, Nellore</a>
       </div>
     </div>
     <div class="event-card reveal right">
@@ -803,9 +812,9 @@ footer{
       <div class="event-detail">
         The sacred union through holy fire — witnessing our Saat Phere and eternal vows before family &amp; God.
         <strong>📅 Date &amp; Time</strong>
-        Sunday, 26th April 2026<br/>7:40 AM onwards
+        Sunday, 26th April 2026<br/>7:30 AM onwards
         <strong>📍 Venue</strong>
-        Naidu Kalyanamandapam<br/>Nellore, Andhra Pradesh
+        <a href="https://maps.app.goo.gl/nieaBeFS2DXiLAkaA" target="_blank" class="venue-link"><span class="map-icon">🗺️</span>Naidu Kalyanamandapam, Nellore</a>
       </div>
     </div>
   </div>
@@ -913,7 +922,7 @@ footer{
 
 // ── COUNTDOWN
 function updateCountdown(){
-  const target=new Date('2026-04-26T07:40:00');
+  const target=new Date('2026-04-26T07:30:00');
   const now=new Date();
   const diff=target-now;
   if(diff<=0){
