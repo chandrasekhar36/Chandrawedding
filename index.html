@@ -464,6 +464,7 @@ section{
   inset:0;
   background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,0.06) 0%,transparent 70%);
   opacity:0;transition:opacity 0.3s;
+  pointer-events:none;
 }
 .event-card:hover{
   transform:translateY(-8px);
@@ -489,14 +490,24 @@ section{
 }
 .event-detail strong::before{content:'✦';font-size:8px}
 .venue-link{
-  display:inline-flex;align-items:center;gap:6px;
-  color:var(--gold2);text-decoration:none;font-style:normal;
-  border-bottom:1px dashed rgba(201,168,76,0.4);
-  padding-bottom:2px;
-  transition:color 0.25s,border-color 0.25s,text-shadow 0.25s;
+  display:inline-flex;align-items:center;gap:8px;
+  color:var(--deep);text-decoration:none;font-style:normal;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  border:none;
+  padding:10px 20px;
+  border-radius:2px;
+  font-size:clamp(13px,2vw,15px);
+  font-weight:600;
+  letter-spacing:1px;
+  margin-top:6px;
+  box-shadow:0 4px 20px rgba(201,168,76,0.3);
+  transition:transform 0.2s,box-shadow 0.2s;
 }
-.venue-link:hover{color:var(--pale);border-bottom-color:var(--gold);text-shadow:0 0 16px rgba(201,168,76,0.5);}
-.venue-link .map-icon{font-size:15px;}
+.venue-link:hover,.venue-link:active{
+  transform:translateY(-2px);
+  box-shadow:0 8px 30px rgba(201,168,76,0.5);
+}
+.venue-link .map-icon{font-size:16px;}
 
 /* ── FAMILIES ── */
 .families-bg{
@@ -803,10 +814,7 @@ footer{
         <strong>📅 Date &amp; Time</strong>
         Saturday, 25th April 2026<br/>6:00 PM – 9:00 PM
         <strong>📍 Venue</strong>
-        <a href="https://maps.app.goo.gl/nieaBeFS2DXiLAkaA" target="_blank" class="venue-link"><span class="map-icon">🗺️</span>Naidu Kalyanamandapam, Nellore</a>
-      </div>
-    </div>
-    <div class="event-card reveal right">
+        <a href="https://maps.app.goo.gl/nieaBeFS2DXiLAkaA" target="_blank" class="venue-link" style="position:relative;z-index:100;pointer-events:auto;"><span class="map-icon">🗺️</span>Naidu Kalyanamandapam, Nellore</a>
       <span class="event-icon">🔥</span>
       <div class="event-name">Wedding Ceremony</div>
       <div class="event-detail">
@@ -814,7 +822,7 @@ footer{
         <strong>📅 Date &amp; Time</strong>
         Sunday, 26th April 2026<br/>7:30 AM onwards
         <strong>📍 Venue</strong>
-        <a href="https://maps.app.goo.gl/nieaBeFS2DXiLAkaA" target="_blank" class="venue-link"><span class="map-icon">🗺️</span>Naidu Kalyanamandapam, Nellore</a>
+        <a href="https://maps.app.goo.gl/nieaBeFS2DXiLAkaA" target="_blank" class="venue-link" style="position:relative;z-index:100;pointer-events:auto;"><span class="map-icon">🗺️</span>Naidu Kalyanamandapam, Nellore</a>
       </div>
     </div>
   </div>
